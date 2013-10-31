@@ -38,7 +38,7 @@
     
     // set up the initial table data
     NSMutableDictionary *data = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                 @"◉", @"colourvalue", @(0), @"redvalue", @(10), @"bluevalue", @(20), @"greenvalue",
+                                 @(1), @"number", @"◉", @"colourvalue", @(0), @"redvalue", @(10), @"bluevalue", @(20), @"greenvalue",
                                  @(30), @"whitevalue", @(50), @"rampvalue", @(60), @"holdvalue",
                                  nil];
     [self.colourValues addObject:data];
@@ -48,8 +48,10 @@
 }
 
 - (IBAction)addTableRow:(id)sender {
+    NSMutableDictionary *rowValues = [self.colourValues valueAtIndex:0 inPropertyWithKey:@"arrangedObjects"];
+    NSNumber *total = @(rowValues.count+1);
     NSMutableDictionary *data = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                 @"◉", @"colourvalue", @(0), @"redvalue", @(10), @"bluevalue", @(20), @"greenvalue",
+                                 total, @"number", @"◉", @"colourvalue", @(0), @"redvalue", @(10), @"bluevalue", @(20), @"greenvalue",
                                  @(30), @"whitevalue", @(50), @"rampvalue", @(60), @"holdvalue",
                                  nil];
     [self.colourValues addObject:data];

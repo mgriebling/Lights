@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment defaultVersion="1080" identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4514"/>
@@ -669,7 +669,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="136" y="163" width="890" height="573"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1178"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1058"/>
             <view key="contentView" id="Jus-2Q-4DD">
                 <rect key="frame" x="0.0" y="0.0" width="890" height="573"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -719,12 +719,12 @@
                                                             <slider horizontalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qpA-Lf-f84">
                                                                 <rect key="frame" x="29" y="37" width="21" height="143"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                <sliderCell key="cell" continuous="YES" alignment="left" maxValue="255" doubleValue="50" tickMarkPosition="right" allowsTickMarkValuesOnly="YES" sliderType="linear" id="rmz-qV-n34"/>
+                                                                <sliderCell key="cell" continuous="YES" alignment="left" maxValue="255" doubleValue="50" tickMarkPosition="left" allowsTickMarkValuesOnly="YES" sliderType="linear" id="rmz-qV-n34"/>
                                                                 <connections>
                                                                     <binding destination="xwx-Xi-0Cl" name="value" keyPath="selection.redvalue" id="UIO-5v-xfM"/>
                                                                 </connections>
                                                             </slider>
-                                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QlG-1x-COo">
+                                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QlG-1x-COo">
                                                                 <rect key="frame" x="16" y="15" width="47" height="23"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Red" id="67R-z6-RmM">
@@ -733,7 +733,7 @@
                                                                     <color key="backgroundColor" name="shadowColor" catalog="System" colorSpace="catalog"/>
                                                                 </textFieldCell>
                                                             </textField>
-                                                            <textField verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5kJ-dJ-kAK">
+                                                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5kJ-dJ-kAK">
                                                                 <rect key="frame" x="69" y="186" width="37" height="28"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" allowsUndo="NO" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="30" id="MGR-9G-rsk">
@@ -754,15 +754,15 @@
                                                                     <binding destination="xwx-Xi-0Cl" name="value" keyPath="selection.greenvalue" id="4F8-aJ-Wy3"/>
                                                                 </connections>
                                                             </textField>
-                                                            <slider horizontalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eJx-Kr-IWM">
-                                                                <rect key="frame" x="77" y="37" width="23" height="143"/>
+                                                            <slider horizontalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eJx-Kr-IWM">
+                                                                <rect key="frame" x="77" y="37" width="21" height="143"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="255" doubleValue="226.15130009541986" tickMarkPosition="right" allowsTickMarkValuesOnly="YES" sliderType="linear" id="vuy-Kc-6wt"/>
+                                                                <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="255" doubleValue="226.15130009541986" tickMarkPosition="left" allowsTickMarkValuesOnly="YES" sliderType="linear" id="vuy-Kc-6wt"/>
                                                                 <connections>
                                                                     <binding destination="xwx-Xi-0Cl" name="value" keyPath="selection.greenvalue" id="Oq4-0I-wzL"/>
                                                                 </connections>
                                                             </slider>
-                                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IMO-39-TOb">
+                                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IMO-39-TOb">
                                                                 <rect key="frame" x="62" y="15" width="51" height="23"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Green" id="xy2-kL-SNx">
@@ -771,7 +771,7 @@
                                                                     <color key="backgroundColor" name="shadowColor" catalog="System" colorSpace="catalog"/>
                                                                 </textFieldCell>
                                                             </textField>
-                                                            <textField verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HAk-lH-Vgw">
+                                                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HAk-lH-Vgw">
                                                                 <rect key="frame" x="117" y="186" width="37" height="28"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" allowsUndo="NO" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="30" id="e9b-Gk-tNn">
@@ -792,15 +792,15 @@
                                                                     <binding destination="xwx-Xi-0Cl" name="value" keyPath="selection.bluevalue" id="9DY-2A-P6f"/>
                                                                 </connections>
                                                             </textField>
-                                                            <slider horizontalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LjU-rE-3el">
+                                                            <slider horizontalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LjU-rE-3el">
                                                                 <rect key="frame" x="125" y="37" width="21" height="143"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                <sliderCell key="cell" continuous="YES" alignment="left" maxValue="255" doubleValue="50" tickMarkPosition="right" allowsTickMarkValuesOnly="YES" sliderType="linear" id="jmp-3n-fu9"/>
+                                                                <sliderCell key="cell" continuous="YES" alignment="left" maxValue="255" doubleValue="50" tickMarkPosition="left" allowsTickMarkValuesOnly="YES" sliderType="linear" id="jmp-3n-fu9"/>
                                                                 <connections>
                                                                     <binding destination="xwx-Xi-0Cl" name="value" keyPath="selection.bluevalue" id="cMx-OJ-nGr"/>
                                                                 </connections>
                                                             </slider>
-                                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="noX-qf-ukj">
+                                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="noX-qf-ukj">
                                                                 <rect key="frame" x="112" y="14" width="47" height="23"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Blue" id="E5d-zZ-pK6">
@@ -809,7 +809,7 @@
                                                                     <color key="backgroundColor" name="shadowColor" catalog="System" colorSpace="catalog"/>
                                                                 </textFieldCell>
                                                             </textField>
-                                                            <textField verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L8V-Nw-IWD">
+                                                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="L8V-Nw-IWD">
                                                                 <rect key="frame" x="165" y="186" width="37" height="28"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" allowsUndo="NO" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="30" id="bJ4-dd-gOa">
@@ -830,15 +830,15 @@
                                                                     <binding destination="xwx-Xi-0Cl" name="value" keyPath="selection.whitevalue" id="byy-kz-MFu"/>
                                                                 </connections>
                                                             </textField>
-                                                            <slider horizontalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tZa-Hc-yVb">
+                                                            <slider horizontalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tZa-Hc-yVb">
                                                                 <rect key="frame" x="173" y="37" width="21" height="143"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                <sliderCell key="cell" continuous="YES" alignment="left" maxValue="255" doubleValue="50" tickMarkPosition="right" allowsTickMarkValuesOnly="YES" sliderType="linear" id="gcq-ar-2gC"/>
+                                                                <sliderCell key="cell" continuous="YES" alignment="left" maxValue="255" doubleValue="50" tickMarkPosition="left" allowsTickMarkValuesOnly="YES" sliderType="linear" id="gcq-ar-2gC"/>
                                                                 <connections>
                                                                     <binding destination="xwx-Xi-0Cl" name="value" keyPath="selection.whitevalue" id="KX6-mT-uoa"/>
                                                                 </connections>
                                                             </slider>
-                                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EUQ-cS-2dN">
+                                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EUQ-cS-2dN">
                                                                 <rect key="frame" x="159" y="14" width="49" height="23"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="White" id="1cD-n3-9py">
@@ -920,9 +920,9 @@
                                                                 </connections>
                                                             </textField>
                                                             <slider horizontalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ks7-iI-bId">
-                                                                <rect key="frame" x="16" y="36" width="73" height="143"/>
+                                                                <rect key="frame" x="16" y="36" width="74" height="143"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                <sliderCell key="cell" continuous="YES" alignment="left" maxValue="254" tickMarkPosition="right" numberOfTickMarks="16" sliderType="linear" id="SUG-9j-lMT"/>
+                                                                <sliderCell key="cell" continuous="YES" alignment="left" maxValue="254" tickMarkPosition="left" numberOfTickMarks="16" sliderType="linear" id="SUG-9j-lMT"/>
                                                                 <connections>
                                                                     <binding destination="xwx-Xi-0Cl" name="value" keyPath="selection.holdvalue" id="wIY-tx-NhG">
                                                                         <dictionary key="options">
@@ -963,12 +963,12 @@
                                                                 </connections>
                                                             </textField>
                                                             <slider horizontalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nM5-Fe-pgd">
-                                                                <rect key="frame" x="126" y="36" width="27" height="143"/>
+                                                                <rect key="frame" x="126" y="36" width="28" height="143"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="25" id="EnE-46-BOa"/>
                                                                 </constraints>
-                                                                <sliderCell key="cell" continuous="YES" alignment="left" maxValue="254" tickMarkPosition="right" numberOfTickMarks="16" sliderType="linear" id="Pkn-Y5-3BV"/>
+                                                                <sliderCell key="cell" continuous="YES" alignment="left" maxValue="254" tickMarkPosition="left" numberOfTickMarks="16" sliderType="linear" id="Pkn-Y5-3BV"/>
                                                                 <connections>
                                                                     <binding destination="xwx-Xi-0Cl" name="value" keyPath="selection.rampvalue" id="X5a-1e-Ra7">
                                                                         <dictionary key="options">
@@ -1087,7 +1087,7 @@
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <subviews>
                                                             <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="firstColumnOnly" selectionHighlightStyle="sourceList" alternatingRowBackgroundColors="YES" columnReordering="NO" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="20" headerView="xzH-FP-7rV" id="Cmh-6c-6WG">
-                                                                <rect key="frame" x="0.0" y="0.0" width="820" height="235"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="654" height="235"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <size key="intercellSpacing" width="3" height="2"/>
                                                                 <color key="backgroundColor" name="_sourceListBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -1288,7 +1288,7 @@
                                                         <autoresizingMask key="autoresizingMask"/>
                                                     </scroller>
                                                     <tableHeaderView key="headerView" id="xzH-FP-7rV">
-                                                        <rect key="frame" x="0.0" y="0.0" width="820" height="17"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="654" height="17"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                     </tableHeaderView>
                                                 </scrollView>
@@ -1325,11 +1325,11 @@
                                                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     </clipView>
                                                     <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="13b-de-Gfk">
-                                                        <rect key="frame" x="1" y="237" width="151" height="15"/>
+                                                        <rect key="frame" x="1" y="1" width="0.0" height="16"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                     </scroller>
-                                                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="37" horizontal="NO" id="Ipf-TO-nNS">
-                                                        <rect key="frame" x="-14" y="9" width="15" height="0.0"/>
+                                                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="Ipf-TO-nNS">
+                                                        <rect key="frame" x="-15" y="17" width="16" height="0.0"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                     </scroller>
                                                     <tableHeaderView key="headerView" id="NXy-Yh-8sw">

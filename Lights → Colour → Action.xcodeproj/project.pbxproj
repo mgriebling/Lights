@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F31A2C518212B9300982BE0 /* MGIntegerTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F31A2C418212B9300982BE0 /* MGIntegerTransformer.m */; };
+		2F7BBE21181E9A6F0015C43A /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F7BBE20181E9A6F0015C43A /* IOKit.framework */; };
 		477B8C2B181D206F00CBB5EB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 477B8C2A181D206F00CBB5EB /* Cocoa.framework */; };
 		477B8C35181D206F00CBB5EB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 477B8C33181D206F00CBB5EB /* InfoPlist.strings */; };
 		477B8C37181D206F00CBB5EB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 477B8C36181D206F00CBB5EB /* main.m */; };
@@ -18,6 +20,7 @@
 		477B8C4B181D206F00CBB5EB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 477B8C2A181D206F00CBB5EB /* Cocoa.framework */; };
 		477B8C53181D206F00CBB5EB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 477B8C51181D206F00CBB5EB /* InfoPlist.strings */; };
 		477B8C55181D206F00CBB5EB /* Lights_Colour_ActionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 477B8C54181D206F00CBB5EB /* Lights_Colour_ActionTests.m */; };
+		47945BF6181E769700DEF400 /* USBCom.m in Sources */ = {isa = PBXBuildFile; fileRef = 47945BF5181E769700DEF400 /* USBCom.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,25 +34,30 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		477B8C27181D206F00CBB5EB /* Lights-Colour-Action.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lights-Colour-Action.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F31A2C318212B9300982BE0 /* MGIntegerTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGIntegerTransformer.h; sourceTree = "<group>"; };
+		2F31A2C418212B9300982BE0 /* MGIntegerTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGIntegerTransformer.m; sourceTree = "<group>"; };
+		2F7BBE20181E9A6F0015C43A /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		477B8C27181D206F00CBB5EB /* Lights → Colour → Action.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lights → Colour → Action.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		477B8C2A181D206F00CBB5EB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		477B8C2D181D206F00CBB5EB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		477B8C2E181D206F00CBB5EB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		477B8C2F181D206F00CBB5EB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		477B8C32181D206F00CBB5EB /* Lights-Colour-Action-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Lights-Colour-Action-Info.plist"; sourceTree = "<group>"; };
+		477B8C32181D206F00CBB5EB /* Lights → Colour → Action-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Lights → Colour → Action-Info.plist"; sourceTree = "<group>"; };
 		477B8C34181D206F00CBB5EB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		477B8C36181D206F00CBB5EB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		477B8C38181D206F00CBB5EB /* Lights-Colour-Action-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Lights-Colour-Action-Prefix.pch"; sourceTree = "<group>"; };
+		477B8C38181D206F00CBB5EB /* Lights → Colour → Action-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Lights → Colour → Action-Prefix.pch"; sourceTree = "<group>"; };
 		477B8C3A181D206F00CBB5EB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		477B8C3C181D206F00CBB5EB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		477B8C3D181D206F00CBB5EB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		477B8C40181D206F00CBB5EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		477B8C42181D206F00CBB5EB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		477B8C48181D206F00CBB5EB /* Lights-Colour-ActionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lights-Colour-ActionTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		477B8C48181D206F00CBB5EB /* Lights → Colour → ActionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lights → Colour → ActionTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		477B8C49181D206F00CBB5EB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		477B8C50181D206F00CBB5EB /* Lights-Colour-ActionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Lights-Colour-ActionTests-Info.plist"; sourceTree = "<group>"; };
+		477B8C50181D206F00CBB5EB /* Lights → Colour → ActionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Lights → Colour → ActionTests-Info.plist"; sourceTree = "<group>"; };
 		477B8C52181D206F00CBB5EB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		477B8C54181D206F00CBB5EB /* Lights_Colour_ActionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Lights_Colour_ActionTests.m; sourceTree = "<group>"; };
+		47945BF4181E769700DEF400 /* USBCom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USBCom.h; sourceTree = "<group>"; };
+		47945BF5181E769700DEF400 /* USBCom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USBCom.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F7BBE21181E9A6F0015C43A /* IOKit.framework in Frameworks */,
 				477B8C2B181D206F00CBB5EB /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -86,8 +95,8 @@
 		477B8C28181D206F00CBB5EB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				477B8C27181D206F00CBB5EB /* Lights-Colour-Action.app */,
-				477B8C48181D206F00CBB5EB /* Lights-Colour-ActionTests.xctest */,
+				477B8C27181D206F00CBB5EB /* Lights → Colour → Action.app */,
+				477B8C48181D206F00CBB5EB /* Lights → Colour → ActionTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,6 +104,7 @@
 		477B8C29181D206F00CBB5EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2F7BBE20181E9A6F0015C43A /* IOKit.framework */,
 				477B8C2A181D206F00CBB5EB /* Cocoa.framework */,
 				477B8C49181D206F00CBB5EB /* XCTest.framework */,
 				477B8C2C181D206F00CBB5EB /* Other Frameworks */,
@@ -115,11 +125,15 @@
 		477B8C30181D206F00CBB5EB /* Lights-Colour-Action */ = {
 			isa = PBXGroup;
 			children = (
+				47945BF4181E769700DEF400 /* USBCom.h */,
+				47945BF5181E769700DEF400 /* USBCom.m */,
 				477B8C3C181D206F00CBB5EB /* AppDelegate.h */,
 				477B8C3D181D206F00CBB5EB /* AppDelegate.m */,
 				477B8C3F181D206F00CBB5EB /* MainMenu.xib */,
 				477B8C42181D206F00CBB5EB /* Images.xcassets */,
 				477B8C31181D206F00CBB5EB /* Supporting Files */,
+				2F31A2C318212B9300982BE0 /* MGIntegerTransformer.h */,
+				2F31A2C418212B9300982BE0 /* MGIntegerTransformer.m */,
 			);
 			path = "Lights-Colour-Action";
 			sourceTree = "<group>";
@@ -127,10 +141,10 @@
 		477B8C31181D206F00CBB5EB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				477B8C32181D206F00CBB5EB /* Lights-Colour-Action-Info.plist */,
+				477B8C32181D206F00CBB5EB /* Lights → Colour → Action-Info.plist */,
 				477B8C33181D206F00CBB5EB /* InfoPlist.strings */,
 				477B8C36181D206F00CBB5EB /* main.m */,
-				477B8C38181D206F00CBB5EB /* Lights-Colour-Action-Prefix.pch */,
+				477B8C38181D206F00CBB5EB /* Lights → Colour → Action-Prefix.pch */,
 				477B8C39181D206F00CBB5EB /* Credits.rtf */,
 			);
 			name = "Supporting Files";
@@ -148,7 +162,7 @@
 		477B8C4F181D206F00CBB5EB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				477B8C50181D206F00CBB5EB /* Lights-Colour-ActionTests-Info.plist */,
+				477B8C50181D206F00CBB5EB /* Lights → Colour → ActionTests-Info.plist */,
 				477B8C51181D206F00CBB5EB /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -157,9 +171,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		477B8C26181D206F00CBB5EB /* Lights-Colour-Action */ = {
+		477B8C26181D206F00CBB5EB /* Lights → Colour → Action */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 477B8C58181D206F00CBB5EB /* Build configuration list for PBXNativeTarget "Lights-Colour-Action" */;
+			buildConfigurationList = 477B8C58181D206F00CBB5EB /* Build configuration list for PBXNativeTarget "Lights → Colour → Action" */;
 			buildPhases = (
 				477B8C23181D206F00CBB5EB /* Sources */,
 				477B8C24181D206F00CBB5EB /* Frameworks */,
@@ -169,14 +183,14 @@
 			);
 			dependencies = (
 			);
-			name = "Lights-Colour-Action";
+			name = "Lights → Colour → Action";
 			productName = "Lights-Colour-Action";
-			productReference = 477B8C27181D206F00CBB5EB /* Lights-Colour-Action.app */;
+			productReference = 477B8C27181D206F00CBB5EB /* Lights → Colour → Action.app */;
 			productType = "com.apple.product-type.application";
 		};
-		477B8C47181D206F00CBB5EB /* Lights-Colour-ActionTests */ = {
+		477B8C47181D206F00CBB5EB /* Lights → Colour → ActionTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 477B8C5B181D206F00CBB5EB /* Build configuration list for PBXNativeTarget "Lights-Colour-ActionTests" */;
+			buildConfigurationList = 477B8C5B181D206F00CBB5EB /* Build configuration list for PBXNativeTarget "Lights → Colour → ActionTests" */;
 			buildPhases = (
 				477B8C44181D206F00CBB5EB /* Sources */,
 				477B8C45181D206F00CBB5EB /* Frameworks */,
@@ -187,9 +201,9 @@
 			dependencies = (
 				477B8C4D181D206F00CBB5EB /* PBXTargetDependency */,
 			);
-			name = "Lights-Colour-ActionTests";
+			name = "Lights → Colour → ActionTests";
 			productName = "Lights-Colour-ActionTests";
-			productReference = 477B8C48181D206F00CBB5EB /* Lights-Colour-ActionTests.xctest */;
+			productReference = 477B8C48181D206F00CBB5EB /* Lights → Colour → ActionTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -206,7 +220,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 477B8C22181D206F00CBB5EB /* Build configuration list for PBXProject "Lights-Colour-Action" */;
+			buildConfigurationList = 477B8C22181D206F00CBB5EB /* Build configuration list for PBXProject "Lights → Colour → Action" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -219,8 +233,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				477B8C26181D206F00CBB5EB /* Lights-Colour-Action */,
-				477B8C47181D206F00CBB5EB /* Lights-Colour-ActionTests */,
+				477B8C26181D206F00CBB5EB /* Lights → Colour → Action */,
+				477B8C47181D206F00CBB5EB /* Lights → Colour → ActionTests */,
 			);
 		};
 /* End PBXProject section */
@@ -253,6 +267,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				477B8C3E181D206F00CBB5EB /* AppDelegate.m in Sources */,
+				47945BF6181E769700DEF400 /* USBCom.m in Sources */,
+				2F31A2C518212B9300982BE0 /* MGIntegerTransformer.m in Sources */,
 				477B8C37181D206F00CBB5EB /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,7 +286,7 @@
 /* Begin PBXTargetDependency section */
 		477B8C4D181D206F00CBB5EB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 477B8C26181D206F00CBB5EB /* Lights-Colour-Action */;
+			target = 477B8C26181D206F00CBB5EB /* Lights → Colour → Action */;
 			targetProxy = 477B8C4C181D206F00CBB5EB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -385,9 +401,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Lights-Colour-Action/Lights-Colour-Action-Prefix.pch";
-				INFOPLIST_FILE = "Lights-Colour-Action/Lights-Colour-Action-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Lights-Colour-Action/Lights → Colour → Action-Prefix.pch";
+				INFOPLIST_FILE = "Lights-Colour-Action/Lights → Colour → Action-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "Lights → Colour → Action";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -398,9 +415,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Lights-Colour-Action/Lights-Colour-Action-Prefix.pch";
-				INFOPLIST_FILE = "Lights-Colour-Action/Lights-Colour-Action-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Lights-Colour-Action/Lights → Colour → Action-Prefix.pch";
+				INFOPLIST_FILE = "Lights-Colour-Action/Lights → Colour → Action-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "Lights → Colour → Action";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -420,8 +438,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "Lights-Colour-ActionTests/Lights-Colour-ActionTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "Lights-Colour-ActionTests/Lights → Colour → ActionTests-Info.plist";
+				PRODUCT_NAME = "Lights → Colour → ActionTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -438,8 +456,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Lights-Colour-Action/Lights-Colour-Action-Prefix.pch";
-				INFOPLIST_FILE = "Lights-Colour-ActionTests/Lights-Colour-ActionTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "Lights-Colour-ActionTests/Lights → Colour → ActionTests-Info.plist";
+				PRODUCT_NAME = "Lights → Colour → ActionTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -448,7 +466,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		477B8C22181D206F00CBB5EB /* Build configuration list for PBXProject "Lights-Colour-Action" */ = {
+		477B8C22181D206F00CBB5EB /* Build configuration list for PBXProject "Lights → Colour → Action" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				477B8C56181D206F00CBB5EB /* Debug */,
@@ -457,21 +475,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		477B8C58181D206F00CBB5EB /* Build configuration list for PBXNativeTarget "Lights-Colour-Action" */ = {
+		477B8C58181D206F00CBB5EB /* Build configuration list for PBXNativeTarget "Lights → Colour → Action" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				477B8C59181D206F00CBB5EB /* Debug */,
 				477B8C5A181D206F00CBB5EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		477B8C5B181D206F00CBB5EB /* Build configuration list for PBXNativeTarget "Lights-Colour-ActionTests" */ = {
+		477B8C5B181D206F00CBB5EB /* Build configuration list for PBXNativeTarget "Lights → Colour → ActionTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				477B8C5C181D206F00CBB5EB /* Debug */,
 				477B8C5D181D206F00CBB5EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

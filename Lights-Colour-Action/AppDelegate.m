@@ -13,6 +13,7 @@
 @implementation AppDelegate {
     USBCom *port;
     NSArray *ports;
+    NSMutableDictionary *activeScape;
 }
 
 - (void)inspect:(NSArray *)selectedObjects {	// user double-clicked an item in the table
@@ -24,6 +25,7 @@
         [keyPath isEqualToString:@"arrangedObjects.greenvalue"] || [keyPath isEqualToString:@"arrangedObjects.whitevalue"]) {
         [self.colourTable setNeedsDisplay];
     }
+    NSLog(@"Updating something...");
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
@@ -36,12 +38,16 @@
     [self.colourValues addObserver:self forKeyPath:@"arrangedObjects.greenvalue" options:NSKeyValueObservingOptionNew context:NULL];
     [self.colourValues addObserver:self forKeyPath:@"arrangedObjects.whitevalue" options:NSKeyValueObservingOptionNew context:NULL];
     
-    // set up the initial table data
+    // set up the initial colour scenes
     NSMutableDictionary *data = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                  @(1), @"number", @"◉", @"colourvalue", @(0), @"redvalue", @(10), @"bluevalue", @(20), @"greenvalue",
                                  @(30), @"whitevalue", @(50), @"rampvalue", @(60), @"holdvalue",
                                  nil];
     [self.colourValues addObject:data];
+    
+    // set up the initial light scapes
+    activeScape = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"Initial Lights", @"name", data, @"scenes", @(1), @"size", nil];
+    [self.lightScapes addObject:activeScape];
 }
 
 - (IBAction)testSetting:(id)sender {
@@ -55,10 +61,17 @@
                                  @(30), @"whitevalue", @(50), @"rampvalue", @(60), @"holdvalue",
                                  nil];
     [self.colourValues addObject:data];
+    [activeScape setObject:total forKey:@"size"];
 }
 
 - (IBAction)deleteTableRow:(id)sender {
     [self.colourValues removeObjectAtArrangedObjectIndex:[self.colourValues selectionIndex]];
+}
+
+- (IBAction)addLightScape:(id)sender {
+}
+
+- (IBAction)deleteLightScape:(id)sender {
 }
 
 #pragma mark - NSTableView delegate method

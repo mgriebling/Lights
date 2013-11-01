@@ -11,6 +11,7 @@
 @interface AppDelegate : NSObject <NSApplicationDelegate, NSTableViewDelegate>
 
 @property (weak) IBOutlet NSArrayController *colourValues;
+@property (weak) IBOutlet NSArrayController *lightScapes;
 
 @property (assign) IBOutlet NSWindow *window;
 @property (weak) IBOutlet NSTableView *colourTable;

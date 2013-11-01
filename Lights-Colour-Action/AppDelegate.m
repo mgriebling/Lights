@@ -48,6 +48,11 @@
     // set up the initial light scapes
     activeScape = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"Initial Lights", @"name", data, @"scenes", @(1), @"size", nil];
     [self.lightScapes addObject:activeScape];
+    
+//    // set up the initial preferences
+//    NSMutableDictionary *prefs = [NSMutableDictionary dictionaryWithObjectsAndKeys:@(1), @"daylighton", @(10), @"turnondelay", @(10), @"turnoffdelay",
+//                                  @(6*60), @"timeon", @(0), @"firstsequence", @(0), @"totalsequences", @(0), @"firstmacro", @(255), @"protocoladdress", nil];
+//    [self.preferences addObject:prefs];
 }
 
 - (IBAction)testSetting:(id)sender {

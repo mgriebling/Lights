@@ -13,6 +13,15 @@
 @property (weak) IBOutlet NSArrayController *colourValues;
 @property (weak) IBOutlet NSArrayController *lightScapes;
 
+@property (weak) IBOutlet NSNumber *daylightDetectionEnabled;
+@property (weak) IBOutlet NSNumber *turnOnTimeDelay;
+@property (weak) IBOutlet NSNumber *turnOffTimeDelay;
+@property (weak) IBOutlet NSNumber *totalOnTime;
+@property (weak) IBOutlet NSNumber *firstSequence;
+@property (weak) IBOutlet NSNumber *numberOfSequences;
+@property (weak) IBOutlet NSNumber *protocolAddress;
+@property (weak) IBOutlet NSNumber *firstEEPROMMacro;
+
 @property (assign) IBOutlet NSWindow *window;
 @property (weak) IBOutlet NSTableView *colourTable;
 @property (weak) IBOutlet NSSlider *redSlider;

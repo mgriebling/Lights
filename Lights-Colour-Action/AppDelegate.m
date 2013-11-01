@@ -23,9 +23,10 @@
     // Observe changes to colour values so we can update the derived Colour field
     if ([keyPath isEqualToString:@"arrangedObjects.redvalue"] || [keyPath isEqualToString:@"arrangedObjects.bluevalue"] ||
         [keyPath isEqualToString:@"arrangedObjects.greenvalue"] || [keyPath isEqualToString:@"arrangedObjects.whitevalue"]) {
+        
         [self.colourTable setNeedsDisplay];
+        NSLog(@"Updating something...");
     }
-    NSLog(@"Updating something...");
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
@@ -84,6 +85,7 @@
 - (void)tableView:(NSTableView *)tableView willDisplayCell:(id)cell forTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
     // Change the colour cell's background colour based on the RGB values in the model
     NSString *columnName = [tableColumn identifier];
+    NSLog(@"In cell display for column %@", columnName);
     if ([columnName isEqualToString:@"Colour"]) {
         NSMutableDictionary *rowValues = [self.colourValues valueAtIndex:row inPropertyWithKey:@"arrangedObjects"];
         NSNumber *red = [rowValues valueAtIndex:0 inPropertyWithKey:@"redvalue"];
@@ -92,6 +94,7 @@
         NSNumber *white = [rowValues valueAtIndex:0 inPropertyWithKey:@"whitevalue"];
         [cell setBackgroundColor:[NSColor colorWithCalibratedRed:red.integerValue/255.0 green:green.integerValue/255.0 blue:blue.integerValue/255.0 alpha:1.0]];
         [cell setTextColor:[NSColor colorWithCalibratedWhite:white.integerValue/255.0 alpha:1.0]];
+        NSLog(@"Changing colours to R:%@ G:%@ B:%@ W:%@", red, green, blue, white);
     }
 }
 

@@ -61,17 +61,12 @@
     [self.colourValues addObserver:self forKeyPath:@"arrangedObjects.whitevalue" options:NSKeyValueObservingOptionNew context:NULL];
     
     // set up the initial colour scenes
-    [self addTableRow:self];
-//    NSMutableDictionary *data = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-//                                 @(1), @"number", @"◉", @"colourvalue", @(0), @"redvalue", @(10), @"bluevalue", @(20), @"greenvalue",
-//                                 @(30), @"whitevalue", @(50), @"rampvalue", @(60), @"holdvalue",
-//                                 nil];
-//    [self.colourValues addObject:data];
-//    activeScene = data;
+//    [self addTableRow:self];
     
     // set up the initial light scapes
-    activeScape = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"Initial Lights", @"name", activeScene, @"scenes", @(1), @"size", nil];
-    [self.lightScapes addObject:activeScape];
+//    activeScape = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"Initial Lights", @"name", activeScene, @"scenes", @(1), @"size", nil];
+//    [self.lightScapes addObject:activeScape];
+    [self addLightScape:self];
     
     // set up the initial preferences
     [self initPreferences];
@@ -103,6 +98,11 @@
 }
 
 - (IBAction)addLightScape:(id)sender {
+    unsigned long total = [[self.lightScapes arrangedObjects] count]+1;
+    activeScape = [NSMutableDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:@"Light Scape %lu", total], @"name", activeScene, @"scenes", @(1), @"size", nil];
+    [self.colourValues removeObjects:[self.colourValues arrangedObjects]];
+    [self.lightScapes addObject:activeScape];
+    [self addTableRow:sender];
 }
 
 - (IBAction)deleteLightScape:(id)sender {

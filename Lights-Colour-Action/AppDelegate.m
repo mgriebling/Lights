@@ -9,6 +9,12 @@
 #import "AppDelegate.h"
 #import "USBCom.h"
 
+@interface AppDelegate ()
+
+@property (weak) IBOutlet NSButton *deleteScene;
+@property (weak) IBOutlet NSButton *deleteScape;
+
+@end
 
 @implementation AppDelegate {
     USBCom *port;
@@ -55,15 +61,16 @@
     [self.colourValues addObserver:self forKeyPath:@"arrangedObjects.whitevalue" options:NSKeyValueObservingOptionNew context:NULL];
     
     // set up the initial colour scenes
-    NSMutableDictionary *data = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                 @(1), @"number", @"◉", @"colourvalue", @(0), @"redvalue", @(10), @"bluevalue", @(20), @"greenvalue",
-                                 @(30), @"whitevalue", @(50), @"rampvalue", @(60), @"holdvalue",
-                                 nil];
-    [self.colourValues addObject:data];
-    activeScene = data;
+    [self addTableRow:self];
+//    NSMutableDictionary *data = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+//                                 @(1), @"number", @"◉", @"colourvalue", @(0), @"redvalue", @(10), @"bluevalue", @(20), @"greenvalue",
+//                                 @(30), @"whitevalue", @(50), @"rampvalue", @(60), @"holdvalue",
+//                                 nil];
+//    [self.colourValues addObject:data];
+//    activeScene = data;
     
     // set up the initial light scapes
-    activeScape = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"Initial Lights", @"name", data, @"scenes", @(1), @"size", nil];
+    activeScape = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"Initial Lights", @"name", activeScene, @"scenes", @(1), @"size", nil];
     [self.lightScapes addObject:activeScape];
     
     // set up the initial preferences
@@ -74,19 +81,25 @@
 }
 
 - (IBAction)addTableRow:(id)sender {
-//    NSMutableDictionary *rowValues = [self.colourValues valueAtIndex:0 inPropertyWithKey:@"arrangedObjects"];
     NSNumber *total = @([[self.colourValues arrangedObjects] count]+1);
-    NSMutableDictionary *data = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                 total, @"number", @"◉", @"colourvalue", @(0), @"redvalue", @(10), @"bluevalue", @(20), @"greenvalue",
-                                 @(30), @"whitevalue", @(50), @"rampvalue", @(60), @"holdvalue",
-                                 nil];
+    NSMutableDictionary *data = [[[self.colourValues selectedObjects] lastObject] mutableCopy];
+    if (data == nil) {
+        data = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                total, @"number", @"◉", @"colourvalue", @(0), @"redvalue", @(0), @"bluevalue", @(0), @"greenvalue", @(0), @"whitevalue", @(0), @"rampvalue", @(0), @"holdvalue",
+                nil];
+    }
+    [data setObject:total forKey:@"number"];        // set the scene's row number
     [self.colourValues addObject:data];
     activeScene = data;
-    [activeScape setObject:total forKey:@"size"];
+    [activeScape setObject:total forKey:@"size"];   // update the number of items in the light scape
+    [self.deleteScene setEnabled:total.integerValue > 1];
 }
 
 - (IBAction)deleteTableRow:(id)sender {
     [self.colourValues removeObjectAtArrangedObjectIndex:[self.colourValues selectionIndex]];
+    NSInteger total = [[self.colourValues arrangedObjects] count];
+    [activeScape setObject:@(total) forKey:@"size"];                // update the number of items in the light scape
+    [self.deleteScene setEnabled:total > 1];
 }
 
 - (IBAction)addLightScape:(id)sender {

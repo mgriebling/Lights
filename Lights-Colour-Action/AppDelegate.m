@@ -13,6 +13,11 @@
 
 @property (weak) IBOutlet NSButton *deleteScene;
 @property (weak) IBOutlet NSButton *deleteScape;
+@property (weak) IBOutlet NSLevelIndicator *memoryLevel;
+@property (weak) IBOutlet NSComboBox *activeLightScape;
+@property (weak) IBOutlet NSComboBox *controllerPort;
+@property (weak) IBOutlet NSComboBox *portBaudRate;
+@property (weak) IBOutlet NSButton *connectButton;
 
 @end
 
@@ -106,6 +111,9 @@
 }
 
 - (IBAction)deleteLightScape:(id)sender {
+}
+
+- (IBAction)connectToPort:(id)sender {
 }
 
 #pragma mark - NSTableView delegate method

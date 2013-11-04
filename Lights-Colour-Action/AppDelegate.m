@@ -18,6 +18,7 @@
 @property (weak) IBOutlet NSComboBox *controllerPort;
 @property (weak) IBOutlet NSComboBox *portBaudRate;
 @property (weak) IBOutlet NSButton *connectButton;
+@property (weak) IBOutlet NSButton *loadControllerButton;
 
 @end
 
@@ -64,14 +65,17 @@
     [self.colourValues addObserver:self forKeyPath:@"arrangedObjects.bluevalue" options:NSKeyValueObservingOptionNew context:NULL];
     [self.colourValues addObserver:self forKeyPath:@"arrangedObjects.greenvalue" options:NSKeyValueObservingOptionNew context:NULL];
     [self.colourValues addObserver:self forKeyPath:@"arrangedObjects.whitevalue" options:NSKeyValueObservingOptionNew context:NULL];
-    
-    // set up the initial colour scenes
-//    [self addTableRow:self];
-    
-    // set up the initial light scapes
-//    activeScape = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"Initial Lights", @"name", activeScene, @"scenes", @(1), @"size", nil];
-//    [self.lightScapes addObject:activeScape];
+
     [self addLightScape:self];
+    
+    // set up the controls
+    [self.controllerPort addItemsWithObjectValues:ports];
+    [self.controllerPort setStringValue:ports[0]];
+    [self.portBaudRate addItemsWithObjectValues:@[@"9600", @"19200", @"38400"]];
+    [self.portBaudRate setStringValue:@"9600"];
+    NSArray *scapes = [self.lightScapes arrangedObjects];
+    [self.activeLightScape addItemsWithObjectValues:@[[activeScape objectForKey:@"name"]]];
+    [self.activeLightScape setStringValue:[activeScape objectForKey:@"name"]];
     
     // set up the initial preferences
     [self initPreferences];
@@ -114,6 +118,9 @@
 }
 
 - (IBAction)connectToPort:(id)sender {
+}
+
+- (IBAction)loadSaveFromController:(id)sender {
 }
 
 #pragma mark - NSTableView delegate method

@@ -10,7 +10,6 @@
 
 #include <IOKit/serial/IOSerialKeys.h>
 #include <IOKit/IOBSD.h>
-#include <termios.h>
 
 @implementation USBCom {
     int fd;
@@ -49,7 +48,7 @@
     return ttySelect;
 }
 
-- (id)initWithPortName:(NSString *)portName {
+- (id)initWithPortName:(NSString *)portName andBaudRate:(speed_t)baudRate {
     self = [super init];
 	BOOL retryOpen = YES;
 	
@@ -77,8 +76,8 @@
 			newtio.c_iflag = 0;
 			newtio.c_oflag = 0;
 			newtio.c_lflag = 0;
-			newtio.c_ispeed = B9600;
-			newtio.c_ospeed = B9600;
+			newtio.c_ispeed = baudRate;
+			newtio.c_ospeed = baudRate;
 			tcsetattr(fd, TCSAFLUSH, &newtio);
 		}
 	} while (retryOpen);

@@ -7,12 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#include <termios.h>
 
 @interface USBCom : NSObject
 
 + (NSArray *)getPortNames;
 
-- (id)initWithPortName:(NSString *)portName;
+- (id)initWithPortName:(NSString *)portName andBaudRate:(speed_t)baudRate;
 - (void)closePort;
 - (NSInteger)writeString:(NSString *)string;
 - (NSInteger)writeBytes:(unsigned char *)bytes withSize:(NSInteger)size;

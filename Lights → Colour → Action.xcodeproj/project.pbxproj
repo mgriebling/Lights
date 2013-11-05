@@ -21,6 +21,7 @@
 		477B8C53181D206F00CBB5EB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 477B8C51181D206F00CBB5EB /* InfoPlist.strings */; };
 		477B8C55181D206F00CBB5EB /* Lights_Colour_ActionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 477B8C54181D206F00CBB5EB /* Lights_Colour_ActionTests.m */; };
 		47945BF6181E769700DEF400 /* USBCom.m in Sources */ = {isa = PBXBuildFile; fileRef = 47945BF5181E769700DEF400 /* USBCom.m */; };
+		47AEAD2F18290953004EB041 /* Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AEAD2E18290953004EB041 /* Controller.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		477B8C54181D206F00CBB5EB /* Lights_Colour_ActionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Lights_Colour_ActionTests.m; sourceTree = "<group>"; };
 		47945BF4181E769700DEF400 /* USBCom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USBCom.h; sourceTree = "<group>"; };
 		47945BF5181E769700DEF400 /* USBCom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USBCom.m; sourceTree = "<group>"; };
+		47AEAD2D18290953004EB041 /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
+		47AEAD2E18290953004EB041 /* Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Controller.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +137,8 @@
 				477B8C31181D206F00CBB5EB /* Supporting Files */,
 				2F31A2C318212B9300982BE0 /* MGIntegerTransformer.h */,
 				2F31A2C418212B9300982BE0 /* MGIntegerTransformer.m */,
+				47AEAD2D18290953004EB041 /* Controller.h */,
+				47AEAD2E18290953004EB041 /* Controller.m */,
 			);
 			path = "Lights-Colour-Action";
 			sourceTree = "<group>";
@@ -267,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				477B8C3E181D206F00CBB5EB /* AppDelegate.m in Sources */,
+				47AEAD2F18290953004EB041 /* Controller.m in Sources */,
 				47945BF6181E769700DEF400 /* USBCom.m in Sources */,
 				2F31A2C518212B9300982BE0 /* MGIntegerTransformer.m in Sources */,
 				477B8C37181D206F00CBB5EB /* main.m in Sources */,

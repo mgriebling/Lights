@@ -12,11 +12,11 @@
 
 - (BOOL)connectToPort:(NSString *)portName withBaudRate:(NSString *)baudRate;
 
-- (NSArray *)readScenesFromEEPROMAddress:(NSInteger)address withLength:(NSInteger)length;
-- (BOOL)writeScenes:(NSArray *)scenes toEEPROMAddress:(NSInteger)address;
+- (NSArray *)readScenesFromSceneAddress:(NSInteger)sceneAddress withLength:(NSInteger)length;
+- (BOOL)writeScenes:(NSArray *)scenes toSceneAddress:(NSInteger)sceneAddress;
 
-- (NSArray *)readMacrosFromEEPROMAddress:(NSInteger)address withLength:(NSInteger)length;
-- (BOOL)writeMacros:(NSArray *)macros toEEPROMAddress:(NSInteger)address;
+- (NSArray *)readMacrosFromMacroAddress:(NSInteger)macroAddress withLength:(NSInteger)length;
+- (BOOL)writeMacros:(NSArray *)macros toMacroAddress:(NSInteger)macroAddress;
 
 - (NSDictionary *)readSettings;
 - (BOOL)writeSettings:(NSDictionary *)settings;

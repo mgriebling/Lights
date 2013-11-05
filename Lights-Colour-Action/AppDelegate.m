@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Controller.h"
 #import "USBCom.h"
 
 @interface AppDelegate ()
@@ -23,7 +24,7 @@
 @end
 
 @implementation AppDelegate {
-    USBCom *port;
+    Controller *controller;
     NSArray *ports;
     NSMutableDictionary *activeScape;
     NSMutableDictionary *activeScene;
@@ -71,8 +72,8 @@
     // set up the controls
     [self.controllerPort addItemsWithObjectValues:ports];
     [self.controllerPort setStringValue:ports[0]];
-    [self.portBaudRate addItemsWithObjectValues:@[@"9600", @"19200", @"38400"]];
-    [self.portBaudRate setStringValue:@"9600"];
+//    [self.portBaudRate addItemsWithObjectValues:@[@"9600", @"19200", @"38400"]];
+//    [self.portBaudRate setStringValue:@"9600"];
     NSArray *scapes = [self.lightScapes arrangedObjects];
     [self.activeLightScape addItemsWithObjectValues:@[[activeScape objectForKey:@"name"]]];
     [self.activeLightScape setStringValue:[activeScape objectForKey:@"name"]];
@@ -118,6 +119,15 @@
 }
 
 - (IBAction)connectToPort:(id)sender {
+    controller = [[Controller alloc] init];
+    if ([self.connectButton.title isEqualToString:@"Connect"]) {
+        if ([controller connectToPort:self.controllerPort.stringValue withBaudRate:self.portBaudRate.stringValue]) {
+            [self.connectButton setTitle:@"Disconnect"];
+        }
+    } else {
+        controller = nil;       // also disconnects port
+        [self.connectButton setTitle:@"Connect"];
+    }
 }
 
 - (IBAction)loadSaveFromController:(id)sender {

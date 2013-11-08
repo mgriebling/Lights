@@ -12,15 +12,18 @@
 
 @property (weak) IBOutlet NSArrayController *colourValues;
 @property (weak) IBOutlet NSArrayController *lightScapes;
+@property (weak) IBOutlet NSArrayController *macros;
 
-@property (strong) IBOutlet NSNumber *daylightDetectionEnabled;
-@property (strong) IBOutlet NSNumber *turnOnTimeDelay;
-@property (strong) IBOutlet NSNumber *turnOffTimeDelay;
-@property (strong) IBOutlet NSNumber *totalOnTime;
-@property (strong) IBOutlet NSNumber *firstSequence;
-@property (strong) IBOutlet NSNumber *numberOfSequences;
-@property (strong) IBOutlet NSNumber *protocolAddress;
-@property (strong) IBOutlet NSNumber *firstEEPROMMacro;
+@property (strong, nonatomic) IBOutlet NSNumber *daylightDetectionEnabled;
+@property (strong, nonatomic) IBOutlet NSNumber *turnOnTimeDelay;
+@property (strong, nonatomic) IBOutlet NSNumber *turnOffTimeDelay;
+@property (strong, nonatomic) IBOutlet NSNumber *totalOnTime;
+@property (strong, nonatomic) IBOutlet NSNumber *firstSequence;
+@property (strong, nonatomic) IBOutlet NSNumber *numberOfSequences;
+@property (strong, nonatomic) IBOutlet NSNumber *protocolAddress;
+@property (strong, nonatomic) IBOutlet NSNumber *firstEEPROMMacro;
+
+@property (strong, nonatomic) IBOutlet NSArray *ports;
 
 //@property (assign) IBOutlet NSWindow *window;
 //@property (weak) IBOutlet NSTableView *colourTable;

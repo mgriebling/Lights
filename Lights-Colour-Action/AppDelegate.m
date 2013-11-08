@@ -25,9 +25,15 @@
 
 @implementation AppDelegate {
     Controller *controller;
-    NSArray *ports;
     NSMutableDictionary *activeScape;
     NSMutableDictionary *activeScene;
+}
+
+- (NSArray *)ports {
+    if (!_ports) {
+        _ports = [USBCom getPortNames];
+    }
+    return _ports;
 }
 
 - (void)inspect:(NSArray *)selectedObjects {	// user double-clicked an item in the table
@@ -58,8 +64,6 @@
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    ports = [USBCom getPortNames];
-    
     // monitor changes to data
     [self.colourValues addObserver:self forKeyPath:@"selectionIndexes" options:NSKeyValueObservingOptionNew context:NULL];
     [self.colourValues addObserver:self forKeyPath:@"arrangedObjects.redvalue" options:NSKeyValueObservingOptionNew context:NULL];
@@ -70,13 +74,19 @@
     [self addLightScape:self];
     
     // set up the controls
-    [self.controllerPort addItemsWithObjectValues:ports];
-    [self.controllerPort setStringValue:ports[0]];
+//    [self.controllerPort addItemsWithObjectValues:self.ports];
+    [self.controllerPort setStringValue:self.ports[0]];
 //    [self.portBaudRate addItemsWithObjectValues:@[@"9600", @"19200", @"38400"]];
 //    [self.portBaudRate setStringValue:@"9600"];
-    NSArray *scapes = [self.lightScapes arrangedObjects];
+//    NSArray *scapes = [self.lightScapes arrangedObjects];
     [self.activeLightScape addItemsWithObjectValues:@[[activeScape objectForKey:@"name"]]];
     [self.activeLightScape setStringValue:[activeScape objectForKey:@"name"]];
+    
+    // set up the macros
+     NSDictionary *data = [NSDictionary dictionaryWithObjectsAndKeys:
+        @(1), @"number", @"◉", @"colourvalue", @(0), @"redvalue", @(0), @"bluevalue", @(0), @"greenvalue", @(0), @"whitevalue", @(0), @"rampvalue", @(0), @"holdvalue",
+        nil];
+    [self.macros addObject:data];
     
     // set up the initial preferences
     [self initPreferences];
